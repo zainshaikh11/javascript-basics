@@ -36,14 +36,14 @@ body {
 .block--left .block__p {
   text-align: center;
   font-size: 1.5em;
-  color: white;
+  color: #ebeced;
 }
 .block__a {
   padding: 5px;
   margin: 5px;
   background: #404453;
   border-radius: 5px;
-  color: white;
+  color: #ebeced;
   text-decoration: none;
 }
 .block--right {
