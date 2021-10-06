@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300&display=swap');
+
+body { 
+  box-sizing: border-box;
+    display: flex;
+    margin: 0;
+    font-size: 24px;
+    font-family: 'Encode Sans', sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 5px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #404453; 
+    border-radius: 10px;
+  }
+
+.block--left {
+    display: flex;
+    height: 100vh;
+    box-sizing: border-box;
+    width: 20vw;
+    background: #272b33;
+    flex-direction: column;
+    overflow: auto;
+}
+.block--left .block__p { 
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+}
+.block__a {
+    padding: 5px;
+    margin: 5px;
+    background: #404453;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+.block--right {
+    display: flex;
+    justify-content: left;
+    height: 100vh;
+    width: 80vw;
+    background: #ebeced;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 15px;
+}
