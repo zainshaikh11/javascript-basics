@@ -115,40 +115,40 @@ const code2 = () => {
         <ul>
             <li>
                 <h3>Arrow Functions</h3>
-                <p>
+                <div>
                     All the modules of this project are<br>
                     build using callback funtions itself.
-                </p>
+                </div>
             </li>
             <li>
                 <h3>Default Parameters</h3>
-                <p>
+                <div>
                     ${dpView}
-                </p>
+                </div>
             </li>
             <li>
                 <h3>For Of Loop</h3>
-                <p>
+                <div>
                     ${forOfView}
-                </p>
+                </div>
             </li>
             <li>
                 <h3>Spread Attributes</h3>
-                <p>
+                <div>
                     ${spreadView}
-                </p>
+                </div>
             </li>
             <li>
                 <h3>Class Static</h3>
-                <p>
+                <div>
                     ${staticView}
-                </p>
+                </div>
             </li>
             <li>
                 <h3>Getters and setters</h3>
-                <p>
+                <div>
                     ${getsetView}
-                </p>
+                </div>
             </li>
         </ul>
     `

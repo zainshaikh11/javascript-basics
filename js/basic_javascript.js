@@ -1,4 +1,4 @@
-const code1 = () => { 
+const code1 = async () => { 
     data = ''
     console.log("testing click event")
     const rightPage = document.getElementById("right")
@@ -82,6 +82,39 @@ const code1 = () => {
     arr1.join(" ") :- ${arr1.join(" ")}
     `
 
+
+
+    const eventView = `
+        <button id="btn" onclick="{onClick()}">OnClick</button>
+    `
+
+    // Async Await
+    const getactivity = async () => {
+        const response = await fetch('https://www.boredapi.com/api/activity')
+        const activity = await response.json()
+        console.log(activity)
+        return activity
+    }
+    rightPage.style.textAlign = 'center'
+    rightPage.style.justifyContent = 'center'
+    rightPage.innerHTML = `Loading`
+    let activity = await getactivity()
+    rightPage.style.textAlign = 'left'
+    rightPage.style.justifyContent = 'left'
+    console.log(activity.activity)
+
+    const asyncawaitView = `
+    const getactivity = async ()=> {<br>
+        const response = await fetch('https://www.boredapi.com/api/activity')<br>
+        const activity = await response.json()<br>
+        return activity<br>
+    }<br><br>
+
+    activity = getactivity()<br>
+    Output: <br>
+    Activity :${activity.activity}
+    `
+
     rightPage.innerHTML = `
         <h2>Basic Javascript -></h2>
         <ul>
@@ -123,10 +156,21 @@ const code1 = () => {
             </li>
             <li>
                 <h3>Events</h3>
+                <div>
+                    ${eventView}
+                </div>
             </li>
             <li>
                 <h3>Async Await</h3>
+                <div>
+                    ${asyncawaitView}
+                </div>
             </li>
         <ul>
     `
+}
+
+// Events
+const onClick = () => {
+    alert("button clicked")
 }
