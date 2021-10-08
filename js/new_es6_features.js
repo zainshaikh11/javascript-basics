@@ -1,4 +1,7 @@
 const code2 = () => {
+  const rightPageCode2 = document.getElementById("right")
+  rightPageCode2.style.textAlign = 'left'
+  rightPageCode2.style.justifyContent = 'left'
   console.log("testing click event")
   const rightPage = document.getElementById("right")
 
@@ -110,7 +113,7 @@ const code2 = () => {
     Name after setter : ${nameAfterSet}<br>
   `
 
-  rightPage.innerHTML = `
+  rightPageCode2.innerHTML = `
         <h2>New ES6 Features -></h2>
         <ul>
             <li>

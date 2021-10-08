@@ -1,6 +1,5 @@
 const code1 = async () => { 
     data = ''
-    console.log("testing click event")
     const rightPage = document.getElementById("right")
     const selected = document.getElementById("code1")
 
@@ -92,16 +91,14 @@ const code1 = async () => {
     const getactivity = async () => {
         const response = await fetch('https://www.boredapi.com/api/activity')
         const activity = await response.json()
-        console.log(activity)
         return activity
     }
     rightPage.style.textAlign = 'center'
     rightPage.style.justifyContent = 'center'
-    rightPage.innerHTML = `Loading`
+    rightPage.innerHTML = `<div class="loader"></div><br><div>Loading...<div>`
     let activity = await getactivity()
     rightPage.style.textAlign = 'left'
     rightPage.style.justifyContent = 'left'
-    console.log(activity.activity)
 
     const asyncawaitView = `
     const getactivity = async ()=> {<br>

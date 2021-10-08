@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300&display=swap");
-
+:root {
+  --primary: #ebeced;
+  --secondary: #272b33;
+  --accent: #404453;
+  --text-primary: #272b33;
+  --text-secondary: #ebeced;
+}
 body {
   box-sizing: border-box;
   display: flex;
@@ -20,7 +26,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #404453;
+  background: var(--accent);
   border-radius: 10px;
 }
 
@@ -29,21 +35,21 @@ body {
   height: 100vh;
   box-sizing: border-box;
   width: 20vw;
-  background: #272b33;
+  background: var(--secondary);
   flex-direction: column;
   overflow: auto;
 }
 .block--left .block__p {
   text-align: center;
   font-size: 1.5em;
-  color: #ebeced;
+  color: var(--text-secondary);
 }
 .block__a {
   padding: 5px;
   margin: 5px;
-  background: #404453;
+  background: var(--accent);
   border-radius: 5px;
-  color: #ebeced;
+  color: var(--text-secondary);
   text-decoration: none;
 }
 .block--right {
@@ -51,11 +57,31 @@ body {
   justify-content: left;
   height: 100vh;
   width: 80vw;
-  background: #ebeced;
+  background: var(--primary);
   overflow: auto;
   flex-direction: column;
   box-sizing: border-box;
   padding: 15px;
+  color: var(--text-primary);
+}
+
+
+
+.themeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background: var(--accent);
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  top: 40px;
+  right: 40px;
+}
+
+.themeButton i {
+  color: var(--text-secondary);
 }
 
 @media screen and (max-width: 768px) {
@@ -72,5 +98,31 @@ body {
   .block--right {
     height: 90vh;
     width: 100vw;
+  }
+
+  .themeButton { 
+    top: 11vh;
+    right: 10px;
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.loader {
+  align-self: center;
+  border: 16px solid var(--secondary);
+  border-radius: 50%;
+  border-top: 16px solid var(--primary);
+  width: 74px;
+  height: 74px;
+  animation: loading 1.5s linear infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
